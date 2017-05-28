@@ -1,0 +1,22 @@
+{
+  "name": "devops-emails",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "server": "lite-server -c lite-server.json",
+    "pug": "pug -O data.js src/index.pug -w -P -o dist",
+    "dev": "npm-run-all --parallel pug server",
+    "build": "pug -O data.js src/index.pug -o dist"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "lite-server": "2.2.2",
+    "npm-run-all": "3.1.2",
+    "pug": "2.0.0-beta6",
+    "pug-cli": "1.0.0-alpha6",
+    "stylus": "0.54.5"
+  }
+}

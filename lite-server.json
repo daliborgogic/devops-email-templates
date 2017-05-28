@@ -1,0 +1,5 @@
+{
+  "port": 3005,
+  "files": ["./dist/**/*.html"],
+  "server": { "baseDir": "./dist" }
+}
