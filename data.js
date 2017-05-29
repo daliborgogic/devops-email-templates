@@ -12,7 +12,7 @@ module.exports = {
     }
   },
   title: 'DevOpsLinks',
-  brandColor: '#212121',
+  brandColor: '#212121', // red #ff5252
   monospace: 'Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono, Bitstream Vera Sans Mono, Courier New, monospace, serif;',
   sansSerif: '-apple-system, BlinkMacSystemFont, \'Segoe UI\', \'Roboto\', \'Oxygen\', \'Ubuntu\', \'Cantarell\', \'Fira Sans\', \'Droid Sans\', \'Helvetica Neue\', sans-serif'
 }
