@@ -1,4 +1,4 @@
-### DevOps email templates
+# DevOps email templates
 
 <p align="center">
   <a href="https://daliborgogic.github.io/devops-email-templates/" target="_blank">
@@ -7,6 +7,8 @@
     Preview
   </a>
 </p>
+
+## Build Setup
 
 ```bash
 # install dependencies
