@@ -1,33 +1,83 @@
-doctype html
+//-doctype html
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 html(lang="en")
   head
     meta(charset="utf-8")
     meta(name="viewport" content="width=device-width, initial-scale=1")
     title= title
     :stylus
+      table
+        table-layout fixed
+      // CLIENT-SPECIFIC STYLES ////////////////////////////////////////////////
+      // Force Outlook to provide a "view in browser" message
+      #outlook a
+        padding 0
+
+      // Force Hotmail to display emails at full width
+      .ReadMsgBody
+        width 100%
+
+      .ExternalClass
+        width 100%
+
+      // Force Hotmail to display normal line spacing
+      .ExternalClass
+      .ExternalClass p
+      .ExternalClass span
+      .ExternalClass font
+      .ExternalClass td
+      .ExternalClass div
+        line-height 100%
+
+      // Prevent WebKit and Windows mobile changing default text sizes
+      body
+      table
+      td
+      p
+      a
+      li
+      blockquote
+        -webkit-text-size-adjust 100%
+        -ms-text-size-adjust 100%
+      // Remove spacing between tables in Outlook 2007 and up
+      table
+      td
+        mso-table-lspace 0pt
+        mso-table-rspace 0pt
+
+      // Allow smoother rendering of resized image in Internet Explorer
+      img
+        -ms-interpolation-mode bicubic
+
       @media only screen and (max-width: 710px)
         body
-          margin 0
-          padding-left 16px
-          padding-right 16px
+          width 95%!important
+          margin 0 auto
+          //padding-left 16px
+          //padding-right 16px
         .fw
-          width 100%
+          width 100%!important
+          display block
+        .dn
+          display none
+        tbody
+        tr
+          display block
 
-  body(leftmargin="0" topmargin="0" marginwidth="0" marginheight="0" style="background-color: #ffffff")
-    table.fw(width="600" border="0" cellpadding="0" cellspacing="0" align="center" style="border-collapse:collapse; mso-table-lspace:0pt; mso-table-rspace:0pt;")
+
+  body(leftmargin="0" topmargin="0" marginwidth="0" marginheight="0" offset="0")
+    table.fw(width="600" border="0" cellpadding="0" cellspacing="0" align="center")
       tr
-        td(height="32")
-      tr
-        td.fw
-          table.fw(width="568" border="0" cellpadding="0" cellspacing="0" align="center" valign="top" style="border-collapse:collapse; mso-table-lspace:0pt; mso-table-rspace:0pt;")
+        td.dn(height="32")
+          //-table.fw(width="568" border="0" cellpadding="0" cellspacing="0" align="center" valign="top" style="border-collapse:collapse; mso-table-lspace:0pt; mso-table-rspace:0pt;")
             tr
-              td(valign="top" style="-webkit-text-size-adjust: none; color: #B8B8B8; font-size: 12px; line-height: 1.6; font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;")
+              td.fw(valign="top" style="-webkit-text-size-adjust: none; color: #B8B8B8; font-size: 12px; line-height: 1.6; font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;")
                 | DevOpsLinks is a free newsletter for DevOps &amp; SysAdmins Featuring Curated Content, Must Read Articles &amp; Tools.
-              td(width="16")
-              td(valign="top" width="100px")
+              td.fw(width="16")
+              td.fw(valign="top" width="100px")
                 span(style="-webkit-text-size-adjust: none; color: #B8B8B8; font-size: 12px; line-height: 1.6; font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif; border-bottom: 1px solid #B8B8B8") View in broser
 
-          table.fw(width="568" border="0" cellpadding="0" cellspacing="0" align="center" valign="top" style="border-collapse:collapse; mso-table-lspace:0pt; mso-table-rspace:0pt;")
+          //-table.fw(width="568" border="0" cellpadding="0" cellspacing="0" align="center" valign="top" style="border-collapse:collapse; mso-table-lspace:0pt; mso-table-rspace:0pt;")
             tr
               td(height="32")
             tr
@@ -118,39 +168,39 @@ html(lang="en")
               td(height="80")
 
 
-          //- Nav
-          table.fw(width="50%" border="0" cellpadding="0" cellspacing="0" align="center" valign="top" style="border-collapse:collapse; mso-table-lspace:0pt; mso-table-rspace:0pt;")
-            tr
-              td(width="33.333%" align="center")
-                span(style="-webkit-text-size-adjust: none; color: #B8B8B8; font-size: 13px; line-height: 1; font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif; border-bottom: 1px solid #B8B8B8;")
-                  | ABOUT
-              td(width="33.333%" align="center")
-                span(style="-webkit-text-size-adjust: none; color: #B8B8B8; font-size: 13px; line-height: 1; font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif; border-bottom: 1px solid #B8B8B8;")
-                  | SPONSORING
-              td(width="33.333%" align="center")
-                span(style="-webkit-text-size-adjust: none; color: #B8B8B8; font-size: 13px; line-height: 1; font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif; border-bottom: 1px solid #B8B8B8;")
-                  | CONTACT
-            tr
-              td(height="32")
-              td(height="32")
-              td(height="32")
+    //- Nav
+    table.fw(width="100%" border="0" cellpadding="0" cellspacing="0" align="center" valign="top" style="-webkit-text-size-adjust: none; color: #B8B8B8; font-size: 13px; line-height: 1; font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;")
+      tr
+        td(width="33.333%" align="center")
+          span(style="border-bottom: 1px solid #B8B8B8;")
+            | ABOUT
+        td(width="33.333%" align="center")
+          span(style="border-bottom: 1px solid #B8B8B8;")
+            | SPONSORING
+        td(width="33.333%" align="center")
+          span(style="border-bottom: 1px solid #B8B8B8;")
+            | CONTACT
+      //-tr
+        td.dn(height="32")
+        td.dn(height="32")
+        td.dn(height="32")
 
           //- Header
-          table.fw(width="60%" border="0" cellpadding="0" cellspacing="0" align="center" valign="top" style="border-collapse:collapse; mso-table-lspace:0pt; mso-table-rspace:0pt;")
+          //-table.fw(width="60%" border="0" cellpadding="0" cellspacing="0" align="center" valign="top" style="border-collapse:collapse; mso-table-lspace:0pt; mso-table-rspace:0pt;")
             //-tr
               td(align="center")
                 img(src="assets/logo.png" width="48" alt="")
             tr
-              td(align="center")
+              td.fw(align="center")
                 span(style="-webkit-text-size-adjust: none; color: #212121; font-size: 21px; line-height: 1; font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif; font-weight: bold;")
                   | DevOpsLinks
             tr
-              td(height="80")
+              td.dn(height="80")
 
           //- Footer
-          table.fw(border="0" cellpadding="0" cellspacing="0" align="center" valign="top" style="border-collapse:collapse; mso-table-lspace:0pt; mso-table-rspace:0pt;")
+          //-table.fw(border="0" cellpadding="0" cellspacing="0" align="center" valign="top" style="border-collapse:collapse; mso-table-lspace:0pt; mso-table-rspace:0pt;")
             tr
-              td(height="8" style="-webkit-text-size-adjust: none; color: #B8B8B8; font-size: 10px; line-height: 1.6; font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;")
+              td(align="center" height="8" style="-webkit-text-size-adjust: none; color: #B8B8B8; font-size: 10px; line-height: 1.6; font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;")
                 | Copyright &copy; 2017 DevOpsLinks, All rights reserved.
               tr
                 td(height="80")
