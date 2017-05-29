@@ -9,12 +9,12 @@
 </p>
 
 ```bash
-# Install devDependencies
+# install dependencies
 $ npm i
 
-# Development
+# serve in dev mode, with hot reload at localhost:3005
 $ npm run dev
 
-# Production
+# build for production
 $ npm run build
 ```
