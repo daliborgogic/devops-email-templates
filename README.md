@@ -6,9 +6,7 @@
     <br>
     Preview
   </a>
-</p>>
-
-[Preview]()
+</p>
 
 ```bash
 # Development
