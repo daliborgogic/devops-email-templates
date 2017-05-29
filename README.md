@@ -9,6 +9,9 @@
 </p>
 
 ```bash
+# Install devDependencies
+$ npm i
+
 # Development
 $ npm run dev
 
