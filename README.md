@@ -1,12 +1,14 @@
 # DevOps email templates
 
 <p align="center">
-  <a href="https://daliborgogic.github.io/devops-email-templates/" target="_blank">
-    <img src="https://raw.githubusercontent.com/daliborgogic/devops-email-templates/master/src/assets/preview.jpg" width="644px">
-    <br>
-    Preview
-  </a>
+  <img src="https://raw.githubusercontent.com/daliborgogic/devops-email-templates/master/src/assets/preview.jpg" width="644px">
 </p>
+
+## Preview
+
+[One column](https://daliborgogic.github.io/devops-email-templates/)
+
+[Two columns](https://daliborgogic.github.io/devops-email-templates/two-columns.html)
 
 ## Build Setup
 
