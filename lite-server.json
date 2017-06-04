@@ -1,5 +1,5 @@
 {
   "port": 3005,
-  "files": ["./docs/**/*.html"],
+  "files": ["./docs/**/*.{html,htm,css,js}"],
   "server": { "baseDir": "./docs" }
 }
