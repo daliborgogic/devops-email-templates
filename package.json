@@ -5,8 +5,7 @@
   "scripts": {
     "server": "lite-server -c lite-server.json",
     "pug": "pug -O data.js src/index.pug -w -P -o docs",
-    "dev": "npm-run-all --parallel pug server",
-    "build": "pug -O data.js src/index.pug -o dist"
+    "dev": "npm-run-all --parallel pug server"
   },
   "author": "Dalibor Gogic <mail@daliborgogic.com>",
   "license": "MIT",
