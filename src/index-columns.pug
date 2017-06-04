@@ -1,0 +1,257 @@
+doctype html
+html(lang="en")
+  head
+    meta(charset="utf-8")
+    meta(name="viewport" content="width=device-width, initial-scale=1")
+    title *|MC:SUBJECT|*
+    :stylus
+      // CLIENT-SPECIFIC STYLES ////////////////////////////////////////////////
+      // Force Outlook to provide a "view in browser" message
+      #outlook a
+        padding 0
+
+      // Force Hotmail to display emails at full width
+      .ReadMsgBody
+        width 100%
+
+      .ExternalClass
+        width 100%
+
+      // Force Hotmail to display normal line spacing
+      .ExternalClass
+      .ExternalClass p
+      .ExternalClass span
+      .ExternalClass font
+      .ExternalClass td
+      .ExternalClass div
+        line-height 100%
+
+      // Prevent WebKit and Windows mobile changing default text sizes
+      body
+      table
+      td
+      p
+      a
+      li
+      blockquote
+        -webkit-text-size-adjust 100%
+        -ms-text-size-adjust 100%
+      // Remove spacing between tables in Outlook 2007 and up
+      table
+      td
+        mso-table-lspace 0pt
+        mso-table-rspace 0pt
+
+      // Allow smoother rendering of resized image in Internet Explorer
+      img
+        -ms-interpolation-mode bicubic
+      a
+        text-decoration  none
+        //border-bottom none
+        color #212121
+      @media only screen and (max-width: 544px)
+        body
+          margin 0 auto
+          padding-left 16px
+          padding-right 16px
+        .fw
+          width 100%!important
+          display block
+        .nav td
+          width 33.333%
+          float left
+        .dn
+          display none
+        .db
+          display block
+        .pb
+          padding-bottom 16px
+        .pb2x
+          padding-bottom (16px * 2)
+        .pb6x
+          padding-bottom (10px * 6)
+        tbody
+        tr
+          display block
+
+  body(leftmargin="0" topmargin="0" marginwidth="0" marginheight="0" offset="0")
+    table.fw(width="512" border="0" cellpadding="0" cellspacing="0" align="center")
+      tr
+        td(height="16")
+      tr
+        td(mc:edit="devops_pre_header" valign="top" style=`color: #B8B8B8; font-size: 12px; line-height: 1.6; font-family: ${sansSerif};`)
+          | DevOpsLinks is a free newsletter for DevOps &amp; SysAdmins Featuring Curated Content, Must Read Articles &amp; Tools.
+        td(width="16")
+        td(valign="top" align="right" width="80px")
+          a(href="*|ARCHIVE|*" style=`color: #B8B8B8; font-size: 12px; line-height: 1.6; font-family: ${sansSerif}; border-bottom: 1px solid #B8B8B8` target="_blank")
+            | View in broser
+
+    table.fw(width="512" border="0" cellpadding="0" cellspacing="0" align="center")
+      tr
+        td(height="72")
+      tr
+        td(mc:edit="devops_number")
+          span(style=`text-decoration: none; font-weight: bold; color: #212121; font-size: 72px; line-height: 1; font-family: ${sansSerif};`) #61
+      tr
+        td(height="32")
+
+    //- SPONSOR
+    table.fw(width="512" border="0" cellpadding="0" cellspacing="0" align="center")
+      tr
+        td(style=`color: #B8B8B8; font-size: 12px; line-height: 1.6; font-family: ${sansSerif};`)
+          | From our sponsor
+      tr
+        td(height="16")
+      tr
+        td
+          table.fw(mc:repeatable width="512" border="0" cellpadding="0" cellspacing="0" align="center")
+            tr
+              td(mc:edit="devops_sponsor" style=`color: #B8B8B8; font-size: 16px; line-height: 1.4; font-family: ${sansSerif}; font-style: italic;`)
+                | Concerned about downtime? VictorOps helps you prepare, respond, and recover from IT and DevOps Incidents. #[span(style=`color: ${brandColor}; border-bottom: 1px solid ${brandColor};`) Swing by our product center] to learn how and start your trial.
+            tr
+              td(height="32")
+      tr
+        td(height="32")
+
+    //- INTRO
+    table.fw(width="512" border="0" cellpadding="0" cellspacing="0" align="center")
+      tr
+        td(mc:edit="devops_intro" style=`color: #212121; font-size: 21px; line-height: 1.4; font-family: ${sansSerif};`)
+          p Hey Dalibor,
+
+          p As most of you may know, we started #[span(style=`color: ${brandColor}; border-bottom: 1px solid ${brandColor};`) Shipped], a new newsletter focused on containers and orchestration technologies.
+
+          p If you'd like to support it, answer this 5 min survey and get #[b 25% Discount Coupon] on #[span(style=`color: ${brandColor}; border-bottom: 1px solid ${brandColor};`) PainlessDocker Book].
+
+          p Cheers,#[br]
+            | Aymen.
+      tr
+        td(height="72")
+
+    //- LIST
+    table.fw(width="512" border="0" cellpadding="0" cellspacing="0" align="center")
+      tr
+        td(mc-edit="devops_list_title" style=`color: #B8B8B8; font-size: 12px; line-height: 1.6; font-family: ${sansSerif};`)
+          | List Posts
+      tr
+        td(height="16")
+      tr(mc:repeatable)
+        td(style=`font-family: ${sansSerif};`)
+          span(mc:edit="devops_list_title" style=`font-size: 16px; color: ${brandColor}; line-height: 1.2; margin-top: 0; margin-bottom: 0; border-bottom: 1px solid ${brandColor};`)
+            | 30 Must-Have Tools to Support DevOps - Part 1 | DEVOPS digest
+          p(mc:edit="devops_list_excerpt" style="margin-top: 0; font-size: 14px; color: #B8B8B8; line-height: 1.6; ")
+            | Andrey Akselrod, CTO and a co-founder of Smartling, writes for TechCrunch: DevOps, as we know it, is dead. Perhaps not many people agree with me, but the age of DevOps is just about over...
+
+    //- SPACE
+    table.fw(width="512" border="0" cellpadding="0" cellspacing="0")
+      tr
+        td(height="72")
+
+    //- DISCUSSIONS
+    table.fw(width="512" border="0" cellpadding="0" cellspacing="0" align="center")
+      tr
+        td(mc-edit="devops_discussions_title" valign="top" style=`color: #B8B8B8; font-size: 12px; line-height: 1.6; font-family: ${sansSerif};`)
+          | Discussions
+      tr
+        td(height="16")
+      tr(mc:repeatable)
+        td(style=`font-family: ${sansSerif};`)
+          span(mc:edit="devops_dissussions_title"  style=`font-size: 16px; color: ${brandColor}; line-height: 1.2; margin-top: 0; margin-bottom: 0; border-bottom: 1px solid ${brandColor};`)
+            | SysAdmins, What does your workstation look like? • /r/sysadmin
+          p(mc:edit="devops_dissussions_excerpt" style="margin-top: 0; font-size: 14px; color: #B8B8B8; line-height: 1.6; ")
+            | Andrey Akselrod, CTO and a co-founder of Smartling, writes for TechCrunch: DevOps, as we know it, is dead. Perhaps not many people agree with me, but the age of DevOps is just about over...
+
+    //- SPACE
+    table.fw(width="512" border="0" cellpadding="0" cellspacing="0")
+      tr
+        td(height="72")
+
+    //- BOOK OF THE WEEK
+    table.fw(width="512" border="0" cellpadding="0" cellspacing="0" align="center")
+      tr
+        td.fw(width="248" valign="top")
+          table.fw(border="0" cellpadding="0" cellspacing="0" valign="top")
+            tr
+              td.fw(mc-edit="devops_book_title" height="72" style=`color: #B8B8B8; font-size: 12px; line-height: 1.6; font-family: ${sansSerif};`)
+                | Book of the week
+            tr
+              td.fw(align="center")
+                img(mc:edit="devops_book_cover" mc:allowdesigner src="https://placehold.it/300x400" style="max-width: 100%; height: auto; vertical-align: middle;")
+            tr
+              td(height="16")
+            tr
+              td.fw
+                span(style=`font-family: ${sansSerif}; font-size: 16px; color: ${brandColor}; line-height: 1.2; margin-top: 0; border-bottom: 1px solid ${brandColor};`)
+                  | Implementing Lean Software Development: From Concept to Cash
+        td.pb(width="16")
+
+        td.fw(width="248" valign="top")
+          table.fw(border="0" cellpadding="0" cellspacing="0")
+            tr
+              td(mc-edit="devops_book_title" height="72" style=`color: #B8B8B8; font-size: 12px; line-height: 1.6; font-family: ${sansSerif};`)
+                | Photo of the week
+            tr
+              td.fw(align="center")
+                img(mc:edit="devops_book_cover" mc:allowdesigner src="https://placehold.it/300x400" style="max-width: 100%; height: auto; vertical-align: middle;")
+            tr
+              td(height="16")
+            tr
+              td
+
+
+    //- SPACE
+    table.fw(width="512" border="0" cellpadding="0" cellspacing="0")
+      tr
+        td(height="72")
+
+    //- Share
+    //-table.fw.nav(width="40%" border="0" cellpadding="0" cellspacing="0" align="center" valign="top" style="border-collapse:collapse; mso-table-lspace:0pt; mso-table-rspace:0pt;")
+      tr
+        td(width="33.333%" align="center")
+          span(style="-webkit-text-size-adjust: none; color: #FF3333; font-size: 14px; line-height: 1; font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif; font-weight: bold;")
+            | SHARE
+        td(width="33.333%" align="center")
+          span(style="-webkit-text-size-adjust: none; color: #FF3333; font-size: 14px; line-height: 1; font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif; font-weight: bold;")
+            | TWEET
+        td(width="33.333%" align="center")
+          span(style="-webkit-text-size-adjust: none; color: #FF3333; font-size: 14px; line-height: 1; font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif; font-weight: bold;")
+            | FORWARD
+      tr
+        td(height="80")
+        td(height="80")
+        td(height="80")
+
+
+    //- Nav
+    table.fw.nav(width="512" border="0" cellpadding="0" cellspacing="0" align="center" valign="top" style=`color: #B8B8B8; font-size: 13px; line-height: 1; font-family: ${sansSerif};`)
+      tr
+        td(width="20%")
+        td.pb2x(width="20%" align="center")
+          a(href="http://devopslinks.com/#about" style="border-bottom: 1px solid #B8B8B8; color: #B8B8B8; text-decoration: none;") ABOUT
+        td.pb2x(width="20%" align="center")
+          a(href="http://devopslinks.com/#ads" style="border-bottom: 1px solid #B8B8B8; color: #B8B8B8; text-decoration: none;") SPONSORING
+        td.pb2x(width="20%" align="center")
+          a(href="http://devopslinks.com/#contact" style="border-bottom: 1px solid #B8B8B8; color: #B8B8B8; text-decoration: none;") CONTACT
+        td(width="20%")
+
+    //- Space
+    table.fw(border="0" cellpadding="0" cellspacing="0" align="center" valign="top")
+      tr
+        td(height="32")
+
+    //- Logo
+    table.fw(border="0" cellpadding="0" cellspacing="0" align="center" valign="top")
+      tr
+        td.db(width="100%" align="center")
+          a(href="http://devopslinks.com/" style=`text-decoration: none; border-bottom: none; color: #212121; font-size: 21px; line-height: 1; font-family: ${sansSerif}; font-weight: bold; text-align: center;` target="_blank") DevOpsLinks
+      tr
+        td(height="80")
+
+    //- Footer
+    table.fw(border="0" cellpadding="0" cellspacing="0" align="center" valign="top")
+      tr
+        td.db.pb6x(align="center" height="8" style=`color: #B8B8B8; font-size: 10px; line-height: 1.6; font-family: ${sansSerif};`)
+          | Copyright &copy; *|CURRENT_YEAR|* DevOpsLinks, All rights reserved.
+      tr
+        td.db.pb6x(height="80")
+
