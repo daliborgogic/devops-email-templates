@@ -3,7 +3,7 @@ html(lang="en")
   head
     meta(charset="utf-8")
     meta(name="viewport" content="width=device-width, initial-scale=1")
-    title= title
+    title *|MC:SUBJECT|*
     :stylus
       // CLIENT-SPECIFIC STYLES ////////////////////////////////////////////////
       // Force Outlook to provide a "view in browser" message
@@ -45,6 +45,9 @@ html(lang="en")
       // Allow smoother rendering of resized image in Internet Explorer
       img
         -ms-interpolation-mode bicubic
+      a
+        text-decoration  none
+        border-bottom: 1px solid #212121
 
       @media only screen and (max-width: 544px)
         body
@@ -77,33 +80,44 @@ html(lang="en")
       tr
         td(height="16")
       tr
-        td(valign="top" style=`color: #B8B8B8; font-size: 12px; line-height: 1.6; font-family: ${sansSerif};`)
+        td(mc:edit="devops_pre_header" valign="top" style=`color: #B8B8B8; font-size: 12px; line-height: 1.6; font-family: ${sansSerif};`)
           | DevOpsLinks is a free newsletter for DevOps &amp; SysAdmins Featuring Curated Content, Must Read Articles &amp; Tools.
         td(width="16")
         td(valign="top" align="right" width="80px")
-          span(style=`color: #B8B8B8; font-size: 12px; line-height: 1.6; font-family: ${sansSerif}; border-bottom: 1px solid #B8B8B8`)
+          a(href="*|ARCHIVE|*" style=`color: #B8B8B8; font-size: 12px; line-height: 1.6; font-family: ${sansSerif}; border-bottom: 1px solid #B8B8B8` target="_blank")
             | View in broser
 
     table.fw(width="512" border="0" cellpadding="0" cellspacing="0" align="center" valign="top")
       tr
-        td(height="32")
+        td(height="72")
       tr
-        td(valign="top" style=`font-weight: bold; color: #212121; font-size: 72px; line-height: 1; font-family: ${sansSerif};`)
+        td(mc:edit="devops_number" valign="top" style=`font-weight: bold; color: #212121; font-size: 72px; line-height: 1; font-family: ${sansSerif};`)
           | #61
       tr
         td(height="32")
+
+    //- SPONSOR
+    table.fw(width="512" border="0" cellpadding="0" cellspacing="0" align="center" valign="top")
       tr
         td(style=`color: #B8B8B8; font-size: 12px; line-height: 1.6; font-family: ${sansSerif};`)
           | From our sponsor
       tr
         td(height="16")
       tr
-        td(style=`color: #B8B8B8; font-size: 16px; line-height: 1.4; font-family: ${sansSerif}; font-style: italic;`)
-          | Concerned about downtime? VictorOps helps you prepare, respond, and recover from IT and DevOps Incidents. #[span(style=`color: ${brandColor}; border-bottom: 1px solid ${brandColor};`) Swing by our product center] to learn how and start your trial.
+        td
+          table.fw(mc:repeatable width="512" border="0" cellpadding="0" cellspacing="0" align="center" valign="top")
+            tr
+              td(mc:edit="devops_sponsor" style=`color: #B8B8B8; font-size: 16px; line-height: 1.4; font-family: ${sansSerif}; font-style: italic;`)
+                | Concerned about downtime? VictorOps helps you prepare, respond, and recover from IT and DevOps Incidents. #[span(style=`color: ${brandColor}; border-bottom: 1px solid ${brandColor};`) Swing by our product center] to learn how and start your trial.
+            tr
+              td(height="32")
       tr
-        td(height="72")
+        td(height="64")
+
+    //- INTRO
+    table.fw(width="512" border="0" cellpadding="0" cellspacing="0" align="center" valign="top")
       tr
-        td(style=`color: #212121; font-size: 21px; line-height: 1.4; font-family: ${sansSerif};`)
+        td(mc:edit="devops_intro" style=`color: #212121; font-size: 21px; line-height: 1.4; font-family: ${sansSerif};`)
           p Hey Dalibor,
 
           p As most of you may know, we started #[span(style=`color: ${brandColor}; border-bottom: 1px solid ${brandColor};`) Shipped], a new newsletter focused on containers and orchestration technologies.
@@ -114,50 +128,78 @@ html(lang="en")
             | Aymen.
       tr
         td(height="72")
+
+    //- LIST
+    table.fw(width="512" border="0" cellpadding="0" cellspacing="0" align="center" valign="top")
       tr
-        td(style=`color: #B8B8B8; font-size: 12px; line-height: 1.6; font-family: ${sansSerif};`)
+        td(mc-edit="devops_list_title" style=`color: #B8B8B8; font-size: 12px; line-height: 1.6; font-family: ${sansSerif};`)
           | List Posts
       tr
         td(height="16")
-      tr
+      tr(mc:repeatable)
         td(valign="top" style=`font-family: ${sansSerif};`)
-          span(style=`font-size: 16px; color: ${brandColor}; line-height: 1.2; margin-top: 0; margin-bottom: 0; border-bottom: 1px solid ${brandColor};`)
+          span(mc:edit="devops_list_title" style=`font-size: 16px; color: ${brandColor}; line-height: 1.2; margin-top: 0; margin-bottom: 0; border-bottom: 1px solid ${brandColor};`)
             | 30 Must-Have Tools to Support DevOps - Part 1 | DEVOPS digest
-          p(style="margin-top: 0; font-size: 14px; color: #B8B8B8; line-height: 1.6; ")
+          p(mc:edit="devops_list_excerpt" style="margin-top: 0; font-size: 14px; color: #B8B8B8; line-height: 1.6; ")
             | Andrey Akselrod, CTO and a co-founder of Smartling, writes for TechCrunch: DevOps, as we know it, is dead. Perhaps not many people agree with me, but the age of DevOps is just about over...
+
+    //- SPACE
+    table.fw(width="512" border="0" cellpadding="0" cellspacing="0" align="center" valign="top")
       tr
-        td(height="8")
+        td(height="72")
+
+    //- DISCUSSIONS
+    table.fw(width="512" border="0" cellpadding="0" cellspacing="0" align="center" valign="top")
       tr
-        td(valign="top" style=`font-family: ${sansSerif};`)
-          span(style=`font-size: 16px; color: ${brandColor}; line-height: 1.2; margin-top: 0; margin-bottom: 0; border-bottom: 1px solid ${brandColor};`)
-            | Top 10 IT Management Tools
-          p(style="margin-top: 0; font-size: 14px; color: #B8B8B8; line-height: 1.6; ")
-            | Staying up with the latest IT management tools is akin to keeping up on the latest Starbucks drink options. We simplify it...
-      tr
-        td(height="32")
-      tr
-        td(valign="top")
-          span(style=`color: #B8B8B8; font-size: 12px; line-height: 1.6; font-family: ${sansSerif};`)
-            | Discussions
+        td(mc-edit="devops_discussions_title" valign="top" style=`color: #B8B8B8; font-size: 12px; line-height: 1.6; font-family: ${sansSerif};`)
+          | Discussions
       tr
         td(height="16")
-      tr
+      tr(mc:repeatable)
         td(valign="top" style=`font-family: ${sansSerif};`)
           span(style=`font-size: 16px; color: ${brandColor}; line-height: 1.2; margin-top: 0; margin-bottom: 0; border-bottom: 1px solid ${brandColor};`)
             | SysAdmins, What does your workstation look like? • /r/sysadmin
           p(style="margin-top: 0; font-size: 14px; color: #B8B8B8; line-height: 1.6; ")
             | Andrey Akselrod, CTO and a co-founder of Smartling, writes for TechCrunch: DevOps, as we know it, is dead. Perhaps not many people agree with me, but the age of DevOps is just about over...
+
+    //- SPACE
+    table.fw(width="512" border="0" cellpadding="0" cellspacing="0" align="center" valign="top")
+      tr
+        td(height="72")
+
+    //- BOOK OF THE WEEK
+    table.fw(width="512" border="0" cellpadding="0" cellspacing="0" align="center" valign="top")
+      tr
+        td(mc-edit="devops_discussions_title" valign="top" style=`color: #B8B8B8; font-size: 12px; line-height: 1.6; font-family: ${sansSerif};`)
+          | Book of the week
       tr
         td(height="16")
       tr
         td(valign="top" style=`font-family: ${sansSerif};`)
-          span(style=`font-size: 16px; color: ${brandColor}; line-height: 1.2; margin-top: 0; margin-bottom: 0; border-bottom: 1px solid ${brandColor};`)
-            | Ask HN: What are examples of GitHub repositories with high code quality? | Hacker News
-          p(style="margin-top: 0; font-size: 14px; color: #B8B8B8; line-height: 1.6; ")
-            | The language doesn't really matter. I'm trying to see examples of what people consider high quality...
+          p(style=`display: inline-block; font-size: 16px; color: ${brandColor}; line-height: 1.2; margin-top: 0; border-bottom: 1px solid ${brandColor};`)
+            | Implementing Lean Software Development: From Concept to Cash
+          img(mc:edit="devops_book_cover" mc:allowdesigner src="http://placehold.it/512x700" style="max-width: 100%; height: auto; vertical-align: middle;")
 
+    //- SPACE
+    table.fw(width="512" border="0" cellpadding="0" cellspacing="0" align="center" valign="top")
       tr
-        td(height="80")
+        td(height="32")
+
+    //- PHOTO OF THE WEEK
+    table.fw(width="512" border="0" cellpadding="0" cellspacing="0" align="center" valign="top")
+      tr
+        td(mc-edit="devops_discussions_title" valign="top" style=`color: #B8B8B8; font-size: 12px; line-height: 1.6; font-family: ${sansSerif};`)
+          | Book of the week
+      tr
+        td(height="16")
+      tr
+        td(valign="top" style=`font-family: ${sansSerif};`)
+          img(mc:edit="devops_book_cover" mc:allowdesigner src="http://placehold.it/512x700" style="max-width: 100%; height: auto; vertical-align: middle;")
+
+    //- SPACE
+    table.fw(width="512" border="0" cellpadding="0" cellspacing="0" align="center" valign="top")
+      tr
+        td(height="32")
 
     //- Share
     //-table.fw.nav(width="40%" border="0" cellpadding="0" cellspacing="0" align="center" valign="top" style="border-collapse:collapse; mso-table-lspace:0pt; mso-table-rspace:0pt;")
@@ -182,14 +224,11 @@ html(lang="en")
       tr
         td(width="20%")
         td.pb2x(width="20%" align="center")
-          span(style="border-bottom: 1px solid #B8B8B8;")
-            | ABOUT
+          a(href="http://devopslinks.com/#about" style="border-bottom: 1px solid #B8B8B8; color: #B8B8B8; text-decoration: none;") ABOUT
         td.pb2x(width="20%" align="center")
-          span(style="border-bottom: 1px solid #B8B8B8;")
-            | SPONSORING
+          a(href="http://devopslinks.com/#ads" style="border-bottom: 1px solid #B8B8B8; color: #B8B8B8; text-decoration: none;") SPONSORING
         td.pb2x(width="20%" align="center")
-          span(style="border-bottom: 1px solid #B8B8B8;")
-            | CONTACT
+          a(href="http://devopslinks.com/#contact" style="border-bottom: 1px solid #B8B8B8; color: #B8B8B8; text-decoration: none;") CONTACT
         td(width="20%")
 
     //- Space
@@ -200,8 +239,8 @@ html(lang="en")
     //- Logo
     table.fw(border="0" cellpadding="0" cellspacing="0" align="center" valign="top")
       tr
-        td.db(width="100%" style=`color: #212121; font-size: 21px; line-height: 1; font-family: ${sansSerif}; font-weight: bold; text-align: center;`)
-          | DevOpsLinks
+        td.db(width="100%" align="center")
+          a(href="http://devopslinks.com/" style=`text-decoration: none; border-bottom: none; color: #212121; font-size: 21px; line-height: 1; font-family: ${sansSerif}; font-weight: bold; text-align: center;` target="_blank") DevOpsLinks
       tr
         td(height="80")
 
@@ -209,7 +248,7 @@ html(lang="en")
     table.fw(border="0" cellpadding="0" cellspacing="0" align="center" valign="top")
       tr
         td.db.pb6x(align="center" height="8" style=`color: #B8B8B8; font-size: 10px; line-height: 1.6; font-family: ${sansSerif};`)
-          | Copyright &copy; 2017 DevOpsLinks, All rights reserved.
+          | Copyright &copy; *|CURRENT_YEAR|* DevOpsLinks, All rights reserved.
       tr
         td.db.pb6x(height="80")
 
