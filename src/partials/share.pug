@@ -1,13 +1,21 @@
 //- Share
-table.nav(width="200" border="0" cellpadding="0" cellspacing="0" align="center" valign="top" style="border-collapse:collapse; mso-table-lspace:0pt; mso-table-rspace:0pt;")
+table.fw(width="512" border="0" cellpadding="0" cellspacing="0" align="center" valign="top" style="border-collapse:collapse; mso-table-lspace:0pt; mso-table-rspace:0pt;")
   tr
-    td.hw(width="50%" align="center")
-      a(href="https://www.facebook.com/sharer/sharer.php?u=*|ARCHIVE|*" target="_blank" style="-webkit-text-size-adjust: none; color: #FF3333; font-size: 14px; line-height: 1; font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif; font-weight: bold;")
-        | SHARE
-    td.hw(width="50%" align="center")
-      a(href="https://twitter.com/home?status=*|MC:SUBJECT|* *|ARCHIVE|*" target="_blank" style="-webkit-text-size-adjust: none; color: #FF3333; font-size: 14px; line-height: 1; font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif; font-weight: bold;")
-        | TWEET
+    td(mc-edit="devops_share_title" valign="top" style=`color: #B8B8B8; font-size: 12px; line-height: 1.6; font-family: ${sansSerif};`)
+      | Share
   tr
-    td(height="64")
-    td(height="64")
+    td(height="20")
+  tr
+    td
+      a(href="https://www.facebook.com/sharer/sharer.php?u=*|ARCHIVE|*&t=*|MC:SUBJECT|*" target="_blank" style=`color: ${brandColor}; font-size: 14px; line-height: 1; font-family: ${sansSerif}; border-bottom: 1px solid ${brandColor}`)
+        | Facebook
+      | &nbsp;&nbsp;
+      a(href="https://twitter.com/home?status=*|MC:SUBJECT|*%20*|ARCHIVE|*" target="_blank" style=`color: ${brandColor}; font-size: 14px; line-height: 1; font-family: ${sansSerif}; border-bottom: 1px solid ${brandColor}`)
+        | Twitter
+      | &nbsp;&nbsp;
+      a(href="http://www.linkedin.com/shareArticle?url=*|ARCHIVE|*&mini=true&title=*|MC:SUBJECT|*" target="_blank" style=`color: ${brandColor}; font-size: 14px; line-height: 1; font-family: ${sansSerif}; border-bottom: 1px solid ${brandColor}`)
+        | Linkedin
+      | &nbsp;&nbsp;
+      a(href="http://us3.forward-to-friend.com/forward?u=*|ARCHIVE|*" target="_blank" style=`color: ${brandColor}; font-size: 14px; line-height: 1; font-family: ${sansSerif}; border-bottom: 1px solid ${brandColor}`)
+        | Forward
 
